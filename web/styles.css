@@ -1,0 +1,27 @@
+:root { --bg:#f5f6f8; --card:#fff; --text:#1c2230; --mute:#6b7385; --line:#e3e6ec; --accent:#2f6bff;
+        --up:#0a8f4d; --down:#d6342c; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 system-ui, sans-serif; }
+.page { max-width:1000px; margin:0 auto; padding:32px 16px 64px; }
+h1 { margin:0 0 4px; font-size:1.7rem; } h2 { margin:32px 0 8px; font-size:1.1rem; }
+.hint { color:var(--mute); margin:0 0 20px; }
+code, .mono { font-family: ui-monospace, Menlo, monospace; font-size:.9em; }
+.table-wrap { background:var(--card); border:1px solid var(--line); border-radius:10px; overflow-x:auto; }
+table { width:100%; border-collapse:collapse; }
+th, td { padding:10px 14px; text-align:left; border-bottom:1px solid var(--line); white-space:nowrap; }
+th { font-size:.78rem; text-transform:uppercase; letter-spacing:.04em; color:var(--mute); background:#fafbfc; }
+tbody tr:last-child td { border-bottom:none; }
+.num { text-align:right; font-variant-numeric: tabular-nums; } .strong { font-weight:700; }
+.empty { text-align:center; color:var(--mute); }
+.delta { color:var(--mute); } .delta.up { color:var(--up); font-weight:600; } .delta.down { color:var(--down); font-weight:600; }
+.badge { padding:3px 10px; border-radius:99px; font-size:.8rem; font-weight:600; background:#eef0f4; }
+.badge.UNDERCUT { background:#e3f6ec; color:var(--up); }
+.badge.AT_MIN { background:#fdeae9; color:var(--down); }
+.badge.AT_MAX { background:#fff3dc; color:#a86400; }
+.badge.NO_COMPETITORS { background:#e6eeff; color:var(--accent); }
+.error { background:#fdeae9; color:var(--down); border:1px solid #f4c4c1; padding:10px 14px; border-radius:8px; margin-bottom:16px; }
+textarea { width:100%; font:13px/1.5 ui-monospace, Menlo, monospace; padding:12px; border:1px solid var(--line); border-radius:10px; resize:vertical; }
+.actions { display:flex; gap:8px; margin-top:12px; }
+button { font:inherit; font-weight:600; padding:10px 18px; border:none; border-radius:8px; background:var(--accent); color:#fff; cursor:pointer; }
+button.secondary { background:#e8ebf1; color:var(--text); }
+button:disabled { opacity:.6; cursor:default; }
